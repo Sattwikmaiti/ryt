@@ -117,7 +117,7 @@ const findCar = async () => {
             <p>Car Name: {car.car_name}</p>
             <p>Model: {car.model_no}</p>
             <p>Price:Rs {car.price}</p>
-            <p>Date: {dayjs(car.date_of_sales).format('YYYY-MM-DD')}</p>
+            <p>Date: {dayjs(car.date_of_sale).format('YYYY-MM-DD')}</p>
           </div>
         ))}
       </ul>
