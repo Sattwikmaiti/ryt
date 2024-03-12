@@ -24,7 +24,7 @@ router.post('/cars', async (req, res) => {
 // GET request to retrieve all cars
 router.get('/cars', async (req, res) => {
     try {
-        const cars = await Car.find();
+        const cars = await Car.find().sort({ date_of_sale: 1 });
         res.json(cars);
     } catch (error) {
         res.status(500).send('Internal Server Error');
