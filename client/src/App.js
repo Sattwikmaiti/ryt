@@ -98,7 +98,7 @@ const findCar = async () => {
 
         </div>
             <div className="bottom">
-            <input type="text" placeholder="Search Car" value={specific} onChange={(e)=>setSpecific(e.target.value)}/>
+            <input type="text" placeholder="Search Car by Model_No" value={specific} onChange={(e)=>setSpecific(e.target.value)}/>
             <button onClick={findCar}>Search</button>
             <p>Car Name: {search?.car_name}</p>
             <p>Model: {search?.model_no}</p>
