@@ -24,13 +24,14 @@ const handleSubmit = async (event) => {
   event.preventDefault();
 
   try {
+    console.log(date)
     const response = await axios.post('https://ryt-akx3.onrender.com/api/v1/cars', {
     car_name:   car_name,
       price:car_price,
     model_no:  car_model,
     date_of_sale: date
     });
-    console.log('Car details posted successfully:', response.data);
+    console.log('Car details posted successfully:', response);
     // Reset form fields
     set_carName('');
     set_carPrice('');
