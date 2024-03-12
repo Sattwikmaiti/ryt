@@ -24,7 +24,7 @@ const handleSubmit = async (event) => {
   event.preventDefault();
 
   try {
-    const response = await axios.post('http://localhost:8001/api/v1/cars', {
+    const response = await axios.post('https://ryt-akx3.onrender.com/api/v1/cars', {
     car_name:   car_name,
       price:car_price,
     model_no:  car_model,
@@ -51,7 +51,7 @@ useEffect(() => {
 
 const fetchData = async () => {
   try {
-    const response = await axios.get('http://localhost:8001/api/v1/cars');
+    const response = await axios.get('https://ryt-akx3.onrender.com/api/v1/cars');
     setCarList(response.data);
   } catch (error) {
     console.error('Error fetching data:', error.message);
@@ -63,7 +63,7 @@ const findCar = async () => {
 
   try {
     console.log(typeof specific)
-    const res=await axios.post(`http://localhost:8001/api/v1/findcar`,  { model_no: specific } );
+    const res=await axios.post(`https://ryt-akx3.onrender.com/api/v1/findcar`,  { model_no: specific } );
   //  const response = await axios.get('http://localhost:8001/api/v1/findcar',  { model_no: specific } );
     console.log(res)
      // Assuming the server returns the car 
